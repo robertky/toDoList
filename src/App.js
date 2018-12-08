@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import ToDoList from './ToDoList'
-import ToDoItems from './ToDoItems'
+import ToDoList from './Input_Form/ToDoList'
+import ToDoItems from './Display_Table/ToDoItems'
+import {Table, Jumbotron} from 'react-bootstrap/lib/';
 
+//Holds State of items
 class App extends Component {
   constructor() {
     super()
@@ -12,6 +13,7 @@ class App extends Component {
       currentItem: {text:'', key:''},
     }
   }
+  //Handles the input of current item in text and set it to current Item
   handleInput = e => {
     const itemText = e.target.value
     const currentItem = {text: itemText, key: Date.now()}
@@ -19,6 +21,7 @@ class App extends Component {
       currentItem,
     })
   }
+  //This function used to update the state of items with a new item
   addItem = e => {
     e.preventDefault()
     const newItem = this.state.currentItem
@@ -32,7 +35,7 @@ class App extends Component {
       })
     }
   }
-
+  //This function removes items from the list
   deleteItem = key => {
     const filteredItems = this.state.items.filter(item => {
       return item.key !== key
@@ -41,17 +44,19 @@ class App extends Component {
       items: filteredItems,
     })
   }
-  //Render part of the file
+  //Render file
   render() {
     return (
       <div className="App">
-        <ToDoList 
-          addItem={this.addItem}
-          inputElement={this.inputElement}
-          handleInput={this.handleInput}
-          currentItem={this.state.currentItem}
-        />
-        <ToDoItems entries={this.state.items}  deleteItem={this.deleteItem}/>
+        <Jumbotron>
+          <ToDoList 
+            addItem={this.addItem}
+            inputElement={this.inputElement}
+            handleInput={this.handleInput}
+            currentItem={this.state.currentItem}
+          />
+          <ToDoItems entries={this.state.items}  deleteItem={this.deleteItem}/>
+        </Jumbotron>
       </div>
     );
   }

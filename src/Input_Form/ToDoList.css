@@ -1,0 +1,37 @@
+form{
+	padding-bottom: 10px;
+	color: white;
+}
+
+h1{
+	font-size-adjust: .4;
+}
+
+p{
+	min-width: 200px;
+}
+
+/*Set background to white and centers the text*/
+.table tr,
+.table td,
+.table th {
+    background-color: white !important;
+    text-align: center;
+}
+/*This is used to do the scrolling action on the table*/
+.table-wrapper-scroll-y {
+display: block;
+max-height: 250px;
+overflow-y: auto;
+-ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.deleteButton{
+	float: right;
+}
+
+td{
+	word-wrap: break-word;
+	min-width: 160px;
+	max-width: 160px;
+}
