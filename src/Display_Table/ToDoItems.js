@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import {Table, Jumbotron, Button} from 'react-bootstrap/lib/';
-import './ToDoItems.css'
-import 'simplebar'
 
 
 class ToDoItems extends Component {
