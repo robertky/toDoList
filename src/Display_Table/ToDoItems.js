@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Table, Jumbotron, Button} from 'react-bootstrap/lib/';
+import {Table, Button} from 'react-bootstrap/lib/';
 
 
 class ToDoItems extends Component {

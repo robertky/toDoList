@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import ToDoList from './Input_Form/ToDoList'
 import ToDoItems from './Display_Table/ToDoItems'
-import {Table, Jumbotron} from 'react-bootstrap/lib/';
+import {Jumbotron} from 'react-bootstrap/lib/';
 
 //Holds State of items
 class App extends Component {

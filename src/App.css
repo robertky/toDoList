@@ -1,3 +1,16 @@
+.jumbotron{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 450px;
+  text-align: center;
+  border-radius: 12px;
+  color: rgb(94, 94, 94);
+  padding: 50px;
+  margin-top: 25px;
+}
+
 .App {
   text-align: center;
 }
@@ -32,6 +45,9 @@
 }
 
 body{
-  height: 100%;
-  overflow: auto;
+   background-image: url("./img/Background-image.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
 }
